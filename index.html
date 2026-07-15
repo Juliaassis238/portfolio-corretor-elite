@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head><link as_="image" href="img_0.webp" rel="preload"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Marina Duarte — Corretora de Imóveis de Alto Padrão</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link as="image" href="fundo-capa.webp" rel="preload"/>
+<link as="image" href="img_0.webp" rel="preload"/>
+<link as="image" href="img_1.webp" rel="preload"/>
+<link as="image" href="img_2.webp" rel="preload"/>
+<link as="image" href="img_3.webp" rel="preload"/>
+<link as="image" href="img_4.webp" rel="preload"/>
+<link as="image" href="img_5.webp" rel="preload"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  img { opacity: 1; transition: opacity 0.5s ease-in; }
+  img.loaded { opacity: 1; }
+
+  img { opacity: 1; transition: opacity 0.5s ease-in; }
+  img.loaded { opacity: 1; }
+
+  img { opacity: 1; transition: opacity 0.5s ease-in; }
+  img.loaded { opacity: 1; }
+
+  img { opacity: 1; transition: opacity 0.5s ease-in; }
+  img.loaded { opacity: 1; }
+
+:root{
+  --white:#FFFFFF;
+  --black:#101010;
+  --gold:#D4AF37;
+  --cream:#F4F0EA;
+  --grey:#6E6E6E;
+  --line:rgba(16,16,16,.1);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{width:100%;overflow-x:hidden;background:var(--white);color:var(--black);font-family:'Inter',sans-serif;}
+.display{font-family:'Bebas Neue',sans-serif;letter-spacing:1px;}
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px;}
+
+header{position:fixed;top:0;left:0;right:0;z-index:100;padding:26px 0;transition:.4s;}
+header.scrolled{background:rgba(255,255,255,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line);}
+nav{display:flex;justify-content:space-between;align-items:center;}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:2px;}
+.logo span{color:var(--gold);}
+.navlinks{display:flex;gap:34px;font-size:13.5px;letter-spacing:.5px;text-transform:uppercase;font-weight:500;}
+.navcta{background:var(--black);color:#fff;padding:12px 26px; transition: .3s;}
+.navcta:hover{background: var(--gold); color: var(--black);}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.burger span{width:24px;height:2px;background:var(--black);}
+
+/* hero split with background */
+.hero{min-height:100vh; display:flex; align-items: center; position: relative; background: url('fundo-capa.webp') center/cover no-repeat; color: #fff;}
+.hero::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.5); z-index: 1; }
+.hero-content { position: relative; z-index: 2; width: 100%; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; padding-top: 80px;}
+
+.hero-left{display:flex;flex-direction:column;justify-content:center;}
+.eyebrow{font-size:12.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;font-weight:600;}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,6.4vw,96px);line-height:.95;letter-spacing:1px; color: #fff;}
+.hero p{margin-top:26px;color: #e0e0e0;font-size:16.5px;line-height:1.75;max-width:540px;}
+.hero-actions{display:flex;gap:20px;margin-top:40px;}
+.btn-primary{background:var(--gold);color:var(--black);padding:17px 34px;font-size:13.5px;letter-spacing:.5px;text-transform:uppercase;transition:.3s; font-weight: 700;}
+.btn-primary:hover{background:var(--white);color:var(--black);}
+.btn-ghost{font-size:14px;border-bottom:1px solid var(--white);padding-bottom:4px; color: #fff;}
+.hero-stats{display:flex;gap:44px;margin-top:64px;border-top:1px solid rgba(255,255,255,0.2);padding-top:30px;}
+.hero-stats .n{font-family:'Bebas Neue',sans-serif;font-size:36px; color: var(--gold);}
+.hero-stats .l{font-size:11.5px;color: #ccc;letter-spacing:.5px;text-transform:uppercase;margin-top:4px;}
+
+section{padding:120px 0;}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:56px;}
+.section-head h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(34px,5vw,58px);letter-spacing:1px;}
+.section-head p{max-width:320px;color:var(--grey);font-size:14.5px;line-height:1.7;}
+
+/* listings carousel */
+.listings{background:var(--cream);}
+.listing-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:10px;}
+.listing-track::-webkit-scrollbar{display:none;}
+.listing-card{min-width:360px;scroll-snap-align:start;background:#fff;transition:.4s;}
+.listing-card:hover{transform:translateY(-8px);box-shadow:0 25px 45px -20px rgba(0,0,0,.18);}
+.listing-card .imgwrap{position:relative;}
+.listing-card img{height:250px;width:100%;object-fit:cover;}
+.status{position:absolute;top:16px;left:16px;background:var(--gold);color:var(--black);font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:6px 14px;font-weight:700;}
+.listing-body{width:100%;overflow-x:hidden;padding:24px;}
+.listing-body .price{font-family:'Bebas Neue',sans-serif;font-size:26px;}
+.listing-body h3{font-size:16px;font-weight:500;margin:8px 0;}
+.listing-body .loc{font-size:13px;color:var(--grey);margin-bottom:14px;}
+.listing-specs{display:flex;gap:16px;font-size:13px;color:var(--grey);border-top:1px solid var(--line);padding-top:14px;}
+.carousel-nav{display:flex;gap:12px;margin-top:30px;}
+.carousel-nav button{width:46px;height:46px;border-radius:50%;border:1px solid var(--black);background:transparent;color:var(--black);cursor:pointer;font-size:18px;transition:.3s;}
+.carousel-nav button:hover{background:var(--black);color:#fff;}
+
+/* process */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.proc-item{background:#fff;padding:40px 30px;}
+.proc-item .num{font-family:'Bebas Neue',sans-serif;font-size:44px;color:var(--gold);}
+.proc-item h3{font-size:18px;margin:14px 0 10px;font-weight:600;}
+.proc-item p{font-size:13.5px;color:var(--grey);line-height:1.6;}
+.proc-banner{width:100%;height:320px;object-fit:cover;margin-top:56px;}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center;}
+.about-grid img{width:100%;height:520px;object-fit:cover;}
+.about-text p{color:var(--grey);line-height:1.8;font-size:15.5px;margin-bottom:18px;}
+.badges{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px;}
+.badge{border:1px solid var(--line);padding:10px 18px;font-size:12.5px;letter-spacing:.5px;}
+
+/* testimonials */
+.testi{color:#fff;text-align:center;position:relative;background:
+    linear-gradient(160deg,rgba(16,16,16,.92),rgba(16,16,16,.94)),
+    url('https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&w=1800&q=60') center/cover fixed;}
+.t-wrap{max-width:720px;margin:0 auto;}
+.t-slide{display:none;}
+.t-slide.active{display:block;animation:fadeIn .6s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+.t-slide .stars{color:var(--gold);font-size:18px;letter-spacing:4px;margin-bottom:20px;}
+.t-slide p{font-size:clamp(19px,2.4vw,26px);line-height:1.55;font-weight:300;}
+.t-slide .who{margin-top:22px;color:var(--gold);font-size:13px;letter-spacing:1px;text-transform:uppercase;}
+.dots{display:flex;justify-content:center;gap:10px;margin-top:34px;}
+.dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);cursor:pointer;}
+.dot.active{background:var(--gold);width:22px;border-radius:4px;transition:.3s;}
+
+/* contact improved */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px; align-items: center;}
+.contact-info h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,58px);margin-bottom:20px;letter-spacing:1px;}
+.contact-info p{color:var(--grey);line-height:1.75;max-width:420px;margin-bottom:30px;}
+.info-row{display:flex;gap:16px;margin-bottom:18px;font-size:15px;border-bottom:1px solid var(--line);padding-bottom:14px;}
+.info-row b{min-width:100px;display:inline-block;}
+
+form{background:var(--white);padding:50px; border: 1px solid var(--line); box-shadow: 0 30px 60px rgba(0,0,0,0.05); border-radius: 4px;}
+form h3 { font-family: 'Bebas Neue', sans-serif; font-size: 32px; margin-bottom: 24px; letter-spacing: 1px; }
+form label{font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--grey);display:block;margin-bottom:8px;}
+.field{margin-bottom:20px;}
+form input,form select,form textarea{width:100%;background:var(--cream);border:1px solid transparent;color:var(--black);padding:14px 16px;font-family:'Inter';font-size:14px; transition: .3s;}
+form input:focus, form select:focus, form textarea:focus { outline: none; border-color: var(--gold); background: #fff; }
+form button{width:100%;background:var(--black);color:#fff;border:none;padding:18px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-top:8px;cursor:pointer;font-size:14px;transition:.3s;}
+form button:hover{background:var(--gold);color:var(--black);}
+
+footer{background:#fff;border-top:1px solid var(--line);padding:50px 0;text-align:center;font-size:13px;color:var(--grey);}
+footer .flogo{font-family:'Bebas Neue',sans-serif;color:var(--black);font-size:22px;letter-spacing:1px;margin-bottom:10px;}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease;}
+.reveal.show{opacity:1;transform:translateY(0);}
+
+@media(max-width:900px){
+  .navlinks{display:none;}
+  .burger{display:flex;}
+  .hero-content{grid-template-columns:1fr; padding-top: 120px;}
+  .hero-left{padding: 0 24px;}
+  .hero-stats{flex-wrap:wrap;gap:24px;}
+  .process-grid{grid-template-columns:1fr 1fr;}
+  .about-grid{grid-template-columns:1fr;}
+  .about-grid img{height:340px;}
+  .contact-grid{grid-template-columns:1fr; gap: 40px;}
+  form { padding: 32px; }
+}
+
+@media(max-width:600px){
+  .wrap{padding:0 20px;}
+  section{padding:80px 0;}
+  .hero h1 { font-size: 56px; }
+  .hero-actions{flex-direction:column;gap:12px;}
+  .btn-primary,.btn-ghost{width:100%;text-align:center;}
+  .process-grid{grid-template-columns:1fr;}
+  form{padding:24px;}
+}
+
+</style>
+</head>
+<body>
+<header id="header">
+<div class="wrap">
+<nav>
+<div class="logo">MARINA <span>DUARTE</span></div>
+<div class="navlinks">
+<a href="#imoveis">Imóveis</a>
+<a href="#processo">Como funciona</a>
+<a href="#sobre">Sobre mim</a>
+<a class="navcta" href="#contato">Fale comigo</a>
+</div>
+<div class="burger"><span></span><span></span><span></span></div>
+</nav>
+</div>
+</header>
+<section class="hero">
+<div class="wrap hero-content">
+<div class="hero-left">
+<div class="eyebrow">Corretora de imóveis · CRECI 118.204</div>
+<h1>Imóveis de alto padrão, com atendimento de perto.</h1>
+<p>Ajudo você a comprar, vender ou investir com clareza total sobre o mercado — sem intermediários, sem enrolação, com resultado.</p>
+<div class="hero-actions">
+<a class="btn-primary" href="#imoveis">Ver imóveis</a>
+<a class="btn-ghost" href="#contato">Agendar conversa</a>
+</div>
+<div class="hero-stats">
+<div><div class="n">R$ 340M</div><div class="l">em vendas realizadas</div></div>
+<div><div class="n">210+</div><div class="l">negócios fechados</div></div>
+<div><div class="n">11</div><div class="l">anos de mercado</div></div>
+</div>
+</div>
+</div>
+</section>
+<section class="listings" id="imoveis">
+<div class="wrap">
+<div class="section-head reveal">
+<h2>SELEÇÃO ATUAL</h2>
+<p>Imóveis sob minha representação direta, com visitas agendadas exclusivamente por mim.</p>
+</div>
+<div class="listing-track" id="listingTrack">
+<div class="listing-card">
+<div class="imgwrap"><img alt="Apartamento moderno" decoding="async" fetchpriority="high" loading="eager" src="img_0.webp"/><div class="status">Disponível</div></div>
+<div class="listing-body"><div class="price">R$ 3,8M</div><h3>Apto 3 suítes — Moema</h3><div class="loc">Moema, São Paulo</div><div class="listing-specs"><span>180 m²</span><span>3 suítes</span><span>3 vagas</span></div></div>
+</div>
+<div class="listing-card">
+<div class="imgwrap"><img alt="Casa térrea" decoding="async" fetchpriority="high" loading="lazy" src="img_1.webp"/><div class="status">Disponível</div></div>
+<div class="listing-body"><div class="price">R$ 6,2M</div><h3>Casa térrea — Panamby</h3><div class="loc">Panamby, São Paulo</div><div class="listing-specs"><span>410 m²</span><span>4 suítes</span><span>4 vagas</span></div></div>
+</div>
+<div class="listing-card">
+<div class="imgwrap"><img alt="Cobertura" decoding="async" loading="lazy" src="img_2.webp"/><div class="status">Em negociação</div></div>
+<div class="listing-body"><div class="price">R$ 9,9M</div><h3>Cobertura linear — Itaim Bibi</h3><div class="loc">Itaim Bibi, São Paulo</div><div class="listing-specs"><span>320 m²</span><span>4 suítes</span><span>5 vagas</span></div></div>
+</div>
+<div class="listing-card">
+<div class="imgwrap"><img alt="Apartamento vista livre" decoding="async" loading="lazy" src="img_3.webp"/><div class="status">Disponível</div></div>
+<div class="listing-body"><div class="price">R$ 2,4M</div><h3>Apto vista livre — Brooklin</h3><div class="loc">Brooklin, São Paulo</div><div class="listing-specs"><span>110 m²</span><span>2 suítes</span><span>2 vagas</span></div></div>
+</div>
+</div>
+<div class="carousel-nav">
+<button onclick="scrollListing(-1)">←</button>
+<button onclick="scrollListing(1)">→</button>
+</div>
+</div>
+</section>
+<section id="processo">
+<div class="wrap">
+<div class="section-head reveal">
+<h2>COMO EU TRABALHO</h2>
+<p>Um processo direto, pensado para poupar seu tempo em cada etapa.</p>
+</div>
+<div class="process-grid">
+<div class="proc-item reveal"><div class="num">01</div><h3>Diagnóstico</h3><p>Entendo seu orçamento, prioridades e prazo antes de sugerir qualquer imóvel.</p></div>
+<div class="proc-item reveal"><div class="num">02</div><h3>Curadoria</h3><p>Seleciono pessoalmente as opções que realmente fazem sentido pra você.</p></div>
+<div class="proc-item reveal"><div class="num">03</div><h3>Visitas</h3><p>Acompanho cada visita, com análise técnica do imóvel e da região.</p></div>
+<div class="proc-item reveal"><div class="num">04</div><h3>Fechamento</h3><p>Negocio condições e acompanho toda a documentação até a chave na mão.</p></div>
+</div>
+<img alt="Interior de imóvel moderno" class="proc-banner reveal" decoding="async" loading="lazy" src="img_4.webp"/>
+</div>
+</section>
+<section id="sobre">
+<div class="wrap about-grid">
+<img alt="Marina Duarte atendendo cliente" class="reveal" decoding="async" loading="lazy" src="img_5.webp"/>
+<div class="about-text reveal">
+<div class="eyebrow">Sobre mim</div>
+<h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(30px,4vw,48px);letter-spacing:1px;margin-bottom:20px;">Mais de uma década conectando pessoas ao imóvel certo.</h2>
+<p>Comecei minha carreira no mercado imobiliário em 2015 e, desde então, me especializei em imóveis de médio e alto padrão nas regiões mais valorizadas de São Paulo.</p>
+<p>Acredito que comprar ou vender um imóvel é uma decisão emocional além de financeira — por isso trato cada cliente com a atenção que eu gostaria de receber.</p>
+<div class="badges">
+<div class="badge">CRECI 118.204-F</div>
+<div class="badge">Especialista em alto padrão</div>
+<div class="badge">Atendimento Personalizado</div>
+</div>
+</div>
+</div>
+</section>
+<section class="testi">
+<div class="wrap">
+<div class="t-wrap">
+<div class="t-slide active">
+<div class="stars">★★★★★</div>
+<p>"A Marina não apenas nos mostrou casas, ela entendeu o que nossa família precisava. O processo foi impecável do início ao fim."</p>
+<div class="who">Ricardo &amp; Helena S. — Panamby</div>
+</div>
+</div>
+</div>
+</section>
+<section id="contato">
+<div class="wrap contact-grid">
+<div class="contact-info reveal">
+<h2>VAMOS CONVERSAR?</h2>
+<p>Se você busca um atendimento exclusivo e focado em resultados reais, preencha o formulário ou entre em contato direto.</p>
+<div class="info-row"><b>WhatsApp</b> (11) 99988-7766</div>
+<div class="info-row"><b>E-mail</b> marina@duarteimoveis.com.br</div>
+<div class="info-row"><b>Atendimento</b> Segunda a Sábado, 08h às 20h</div>
+</div>
+<form class="reveal">
+<h3>Envie sua mensagem</h3>
+<div class="field">
+<label>Nome Completo</label>
+<input placeholder="Como podemos te chamar?" type="text"/>
+</div>
+<div class="field">
+<label>E-mail ou Telefone</label>
+<input placeholder="Para retornarmos o contato" type="text"/>
+</div>
+<div class="field">
+<label>O que você busca?</label>
+<select>
+<option>Quero comprar um imóvel</option>
+<option>Quero vender meu imóvel</option>
+<option>Quero investir em imóveis</option>
+</select>
+</div>
+<div class="field">
+<label>Mensagem</label>
+<textarea placeholder="Conte-nos um pouco sobre o que você precisa..." rows="4"></textarea>
+</div>
+<button type="submit">Enviar Solicitação</button>
+</form>
+</div>
+</section>
+<footer>
+<div class="wrap">
+<div class="flogo">MARINA <span>DUARTE</span></div>
+<p>© 2024 Marina Duarte. Todos os direitos reservados. CRECI 118.204-F</p>
+</div>
+</footer>
+<script>
+function scrollListing(dir){
+  const track = document.getElementById('listingTrack');
+  const scrollAmount = 384;
+  track.scrollBy({ left: dir * scrollAmount, behavior: 'smooth' });
+}
+
+window.addEventListener('scroll', () => {
+  const header = document.getElementById('header');
+  if(window.scrollY > 50) header.classList.add('scrolled');
+  else header.classList.remove('scrolled');
+  
+  const reveals = document.querySelectorAll('.reveal');
+  reveals.forEach(el => {
+    const windowHeight = window.innerHeight;
+    const revealTop = el.getBoundingClientRect().top;
+    if(revealTop < windowHeight - 100) el.classList.add('show');
+  });
+});
+
+window.dispatchEvent(new Event('scroll'));
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    if (img.complete) {
+      img.classList.add('loaded');
+    } else {
+      img.addEventListener('load', () => img.classList.add('loaded'));
+    }
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    if (img.complete) {
+      img.classList.add('loaded');
+    } else {
+      img.addEventListener('load', () => img.classList.add('loaded'));
+    }
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    if (img.complete) {
+      img.classList.add('loaded');
+    } else {
+      img.addEventListener('load', () => img.classList.add('loaded'));
+    }
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    if (img.complete) {
+      img.classList.add('loaded');
+    } else {
+      img.addEventListener('load', () => img.classList.add('loaded'));
+    }
+  });
+});
+</script>
+</body>
+</html>
